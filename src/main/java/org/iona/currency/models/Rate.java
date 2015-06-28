@@ -3,6 +3,8 @@ package org.iona.currency.models;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 /**
@@ -11,18 +13,24 @@ import java.util.List;
  */
 
 @Document(collection = "currency")
+@XmlRootElement(name = "rate")
 public class Rate {
 
     @Id
     private String id;
 
-    private String date;
+
+    private int date;
+
 
     private List<Currency> currencies;
 
     public Rate(String date, List<Currency> currencies) {
-        this.date = date;
+        setDate(date);
         this.currencies = currencies;
+    }
+
+    public Rate() {
     }
 
     public String getId() {
@@ -33,18 +41,20 @@ public class Rate {
         this.id = id;
     }
 
-    public String getDate() {
+    @XmlElement(name = "date")
+    public int getDate() {
         return date;
     }
 
     public void setDate(String date) {
-        this.date = date;
+        this.date = Integer.parseInt(date);
     }
 
     public List<Currency> getCurrencies() {
         return currencies;
     }
 
+    @XmlElement(name = "currency")
     public void setCurrencies(List<Currency> currencies) {
         this.currencies = currencies;
     }
