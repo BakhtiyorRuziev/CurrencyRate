@@ -35,7 +35,7 @@ public class RateServiceTest {
 
     @Test
     public void serviceNotFound() throws Exception {
-        Rate rate = rateService.findByDate(20121212);
+        Rate rate = rateService.findByDate(19891212);
         Assert.assertNull(rate);
     }
 
