@@ -45,7 +45,12 @@ public class RateServiceTest {
     }
 
 
+    @Test
     public void checkDiff() throws Exception {
+        Rate rate = rateService.findByDate(20121212);
+        Rate rate2 = rateService.findByDate(20121213);
+        System.out.println(rate);
+        System.out.println(rate2);
 
 
     }

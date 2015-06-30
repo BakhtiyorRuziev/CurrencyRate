@@ -17,6 +17,7 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web:1.2.4.RELEASE'
     compile 'org.springframework.data:spring-data-mongodb:1.7.0.RELEASE'
     compile 'org.springframework.boot:spring-boot-starter-logging:1.2.4.RELEASE'
+    compile 'net.sf.ehcache:ehcache:2.10.0'
     compile 'org.mongodb:mongo-java-driver:3.0.2'
     compile 'joda-time:joda-time:2.8.1'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.5.4'

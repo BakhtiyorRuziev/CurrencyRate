@@ -1,10 +1,12 @@
 package org.iona.currency.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 import java.util.List;
 
 /**
@@ -33,6 +35,8 @@ public class Rate {
     public Rate() {
     }
 
+    @XmlTransient
+    @JsonIgnore
     public String getId() {
         return id;
     }

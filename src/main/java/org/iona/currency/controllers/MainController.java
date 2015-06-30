@@ -24,7 +24,7 @@ public class MainController {
     @Autowired
     RateService rateService;
 
-    @RequestMapping(value = "/find-date/{date}.json", produces = "application/json")
+    @RequestMapping(value = "/date/{date}.json", produces = "application/json")
     @ResponseBody
     public Rate findByDateJson(@PathVariable(value = "date") int date)
     {
@@ -32,7 +32,7 @@ public class MainController {
     }
 
 
-    @RequestMapping(value = "/find-date/{date}.xml", produces = "application/xml")
+    @RequestMapping(value = "/date/{date}.xml", produces = "application/xml")
     @ResponseBody
     public Rate findByDateXml(@PathVariable(value = "date") int date)
     {
@@ -42,7 +42,7 @@ public class MainController {
 
 
 
-    @RequestMapping(value = "/find-between-date/{s}/{e}.json", produces = {"application/json"})
+    @RequestMapping(value = "/between-date/{s}/{e}.json", produces = {"application/json"})
     @ResponseBody
     public List<Rate> findByBetweenDateJson(@PathVariable(value = "s") int sDate,
                                         @PathVariable(value = "e") int eDate)
@@ -50,7 +50,7 @@ public class MainController {
         return rateService.findByBetweenDate(sDate, eDate);
     }
 
-    @RequestMapping(value = "/find-between-date/{s}/{e}.xml", produces = {"application/xml"})
+    @RequestMapping(value = "/between-date/{s}/{e}.xml", produces = {"application/xml"})
     @ResponseBody
     public List<Rate> findByBetweenDateXml(@PathVariable(value = "s") int sDate,
                                         @PathVariable(value = "e") int eDate)
