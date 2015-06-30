@@ -32,32 +32,12 @@ public class RateServiceTest {
     @Autowired
     RateService rateService;
 
-    @Test
-    public void service() throws Exception
-    {
-
-    }
 
     @Test
     public void serviceNotFound() throws Exception {
         Rate rate = rateService.findByDate(20121212);
         Assert.assertNull(rate);
     }
-
-
-    @Test
-    public void checkDiff() throws Exception {
-        Rate rate = rateService.findByDate(20121212);
-        Rate rate2 = rateService.findByDate(20121213);
-        System.out.println(rate);
-        System.out.println(rate2);
-
-
-    }
-
-
-
-
 
 
 
