@@ -24,7 +24,7 @@ Date format: **YYYMMDD**
 ```json
     {
       "date": 20121211,
-      "currencies":[{"code": "036", "charCode": "AUD", "rate": 5.0345,...]
+      "currencies":[{"code": "036", "charCode": "AUD", "rate": 5.0345, ... ]
     }
 ```
 * Query for one date in XML: http://127.0.0.1:8080/date/20121212.xml
